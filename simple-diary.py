@@ -18,3 +18,12 @@ def read_entry():
     except FileNotFoundError:
         print('Diary not found.... add new entry. ')
 
+def clear_diary():
+    confirm = input("Are you sure you want to clear all entries? (y/n)\n ")
+    if confirm.lower()=='y':
+        with open(diary, 'w') as f:
+            f.write("")
+        print("All entries have been cleared. ")
+    else:
+        print("No entries have been cleared. ")
+
