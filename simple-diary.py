@@ -27,3 +27,28 @@ def clear_diary():
     else:
         print("No entries have been cleared. ")
 
+def menu():
+
+    print("\n Hi esprit! \n")
+    print('1. Add an entry')
+    print('2. Read all entries')
+    print('3. Clear all entries')
+    print('4. Quit')
+
+    choice = input("\nEnter your choice: ")
+    if choice == "1":
+        add_entry()
+    elif choice == "2":
+        read_entry()
+    elif choice =="3":
+        clear_diary()
+    elif choice == "4":
+        print("\nBye")
+        quit()
+
+    else:
+        print("\nInvalid choice. Try again. ")
+        menu()
+
+if __name__ == '__main__':
+    menu()
