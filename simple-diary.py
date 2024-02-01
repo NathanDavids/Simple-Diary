@@ -11,3 +11,10 @@ def add_entry():
         f.write(f'\n{date.strftime("%B %d, %Y %I:%M%p")}\n')
         f.write(entry)
 
+def read_entry():
+    try:
+        with open(diary, 'r') as f:
+            print(f.read())
+    except FileNotFoundError:
+        print('Diary not found.... add new entry. ')
+
